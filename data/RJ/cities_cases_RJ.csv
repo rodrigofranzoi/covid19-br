@@ -1,0 +1,38 @@
+"state","city_name","date","new_cases","count"
+"RJ","Barra Mansa","2020-03-05",1,1
+"RJ","Campos dos Goytacazes","2020-03-24",1,1
+"RJ","Duque de Caxias","2020-03-24",1,1
+"RJ","Duque de Caxias","2020-03-25",1,2
+"RJ","Guapimirim","2020-03-18",1,1
+"RJ","Miguel Pereira","2020-03-19",1,1
+"RJ","Niterói","2020-03-09",1,1
+"RJ","Niterói","2020-03-18",5,6
+"RJ","Niterói","2020-03-19",1,7
+"RJ","Niterói","2020-03-20",3,10
+"RJ","Niterói","2020-03-24",2,12
+"RJ","Niterói","2020-03-25",7,19
+"RJ","Não informado","2020-03-20",2,48
+"RJ","Petrópolis","2020-03-20",2,2
+"RJ","Petrópolis","2020-03-21",1,3
+"RJ","Resende","2020-03-25",1,1
+"RJ","Rio de Janeiro","2020-03-06",1,1
+"RJ","Rio de Janeiro","2020-03-08",1,2
+"RJ","Rio de Janeiro","2020-03-09",5,7
+"RJ","Rio de Janeiro","2020-03-11",3,10
+"RJ","Rio de Janeiro","2020-03-12",4,14
+"RJ","Rio de Janeiro","2020-03-13",3,17
+"RJ","Rio de Janeiro","2020-03-14",5,22
+"RJ","Rio de Janeiro","2020-03-16",7,29
+"RJ","Rio de Janeiro","2020-03-17",2,31
+"RJ","Rio de Janeiro","2020-03-18",24,55
+"RJ","Rio de Janeiro","2020-03-19",1,56
+"RJ","Rio de Janeiro","2020-03-20",36,92
+"RJ","Rio de Janeiro","2020-03-21",9,101
+"RJ","Rio de Janeiro","2020-03-22",67,168
+"RJ","Rio de Janeiro","2020-03-23",44,212
+"RJ","Rio de Janeiro","2020-03-24",64,276
+"RJ","Rio de Janeiro","2020-03-25",53,329
+"RJ","São Gonçalo","2020-03-23",3,3
+"RJ","Valença","2020-03-25",1,1
+"RJ","Volta Redonda","2020-03-24",4,4
+"RJ","Volta Redonda","2020-03-25",2,6

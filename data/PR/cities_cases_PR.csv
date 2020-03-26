@@ -1,0 +1,38 @@
+"state","city_name","date","new_cases","count"
+"PR","Campo Largo","2020-03-17",1,1
+"PR","Campo Mourão","2020-03-25",1,1
+"PR","Cascavel","2020-03-23",1,1
+"PR","Cascavel","2020-03-24",1,2
+"PR","Cianorte","2020-03-12",1,1
+"PR","Cianorte","2020-03-17",1,2
+"PR","Cianorte","2020-03-22",1,3
+"PR","Cianorte","2020-03-23",2,5
+"PR","Colombo","2020-03-22",1,1
+"PR","Colombo","2020-03-25",1,2
+"PR","Curitiba","2020-03-12",5,5
+"PR","Curitiba","2020-03-17",2,7
+"PR","Curitiba","2020-03-18",1,8
+"PR","Curitiba","2020-03-19",9,17
+"PR","Curitiba","2020-03-20",10,27
+"PR","Curitiba","2020-03-21",4,31
+"PR","Curitiba","2020-03-22",5,36
+"PR","Curitiba","2020-03-23",3,39
+"PR","Curitiba","2020-03-24",7,46
+"PR","Curitiba","2020-03-25",19,65
+"PR","Faxinal","2020-03-25",1,1
+"PR","Foz do Iguaçu","2020-03-18",1,1
+"PR","Foz do Iguaçu","2020-03-22",3,4
+"PR","Foz do Iguaçu","2020-03-25",1,5
+"PR","Guaíra","2020-03-20",1,1
+"PR","Londrina","2020-03-17",1,1
+"PR","Londrina","2020-03-20",2,3
+"PR","Maringá","2020-03-18",1,1
+"PR","Maringá","2020-03-25",1,2
+"PR","Paranavaí","2020-03-24",1,1
+"PR","Pato Branco","2020-03-21",1,1
+"PR","Pinhais","2020-03-22",1,1
+"PR","Pinhais","2020-03-25",1,2
+"PR","Ponta Grossa","2020-03-21",1,1
+"PR","Ponta Grossa","2020-03-25",2,3
+"PR","Telêmaco Borba","2020-03-24",1,1
+"PR","Umuarama","2020-03-21",1,1

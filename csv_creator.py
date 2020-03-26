@@ -36,5 +36,5 @@ for data in citiesData:
     checkFolder(state,'./data/')
 f.close()
 
-os.system("chmod +x script.R")
+os.system("chmod +x ./Rdata/R/script.R")
 os.system("./Rdata/R/script.R")

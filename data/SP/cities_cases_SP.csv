@@ -1,0 +1,83 @@
+"state","city_name","date","new_cases","count"
+"SP","Barueri","2020-03-18",1,1
+"SP","Caieiras","2020-03-21",1,1
+"SP","Campinas","2020-03-18",1,1
+"SP","Campinas","2020-03-21",2,3
+"SP","Campinas","2020-03-25",1,4
+"SP","Carapicuíba","2020-03-13",1,1
+"SP","Carapicuíba","2020-03-20",1,2
+"SP","Cotia","2020-03-18",1,1
+"SP","Cotia","2020-03-20",1,2
+"SP","Cotia","2020-03-24",4,6
+"SP","Embu das Artes","2020-03-21",1,1
+"SP","Ferraz de Vasconcelos","2020-03-12",1,1
+"SP","Guarulhos","2020-03-17",1,1
+"SP","Guarulhos","2020-03-23",4,5
+"SP","Hortolândia","2020-03-20",1,1
+"SP","Hortolândia","Não informado",1,2
+"SP","Iracemápolis","2020-03-25",1,1
+"SP","Jaguariúna","2020-03-18",1,1
+"SP","Jundiaí","2020-03-23",1,1
+"SP","Mauá","2020-03-16",1,1
+"SP","Mauá","2020-03-24",1,2
+"SP","Mogi das Cruzes","2020-03-20",1,1
+"SP","Mogi das Cruzes","2020-03-24",3,4
+"SP","Não informado","2020-03-18",7,62
+"SP","Osasco","2020-03-18",1,1
+"SP","Osasco","2020-03-21",2,3
+"SP","Poá","2020-03-21",1,1
+"SP","Ribeirão Pires","2020-03-21",1,1
+"SP","Rio Claro","2020-03-21",1,1
+"SP","Santana de Parnaíba","2020-03-07",1,1
+"SP","Santana de Parnaíba","2020-03-20",1,2
+"SP","Santana de Parnaíba","2020-03-21",1,3
+"SP","Santana de Parnaíba","2020-03-25",1,4
+"SP","Santo André","2020-03-16",1,1
+"SP","Santo André","2020-03-18",1,2
+"SP","Santo André","2020-03-20",1,3
+"SP","Santo André","2020-03-23",4,7
+"SP","Santo André","2020-03-24",3,10
+"SP","Santo André","Não informado",7,17
+"SP","Suzano","2020-03-19",1,1
+"SP","São Bernardo do Campo","2020-03-15",1,1
+"SP","São Bernardo do Campo","2020-03-18",2,3
+"SP","São Bernardo do Campo","2020-03-20",1,4
+"SP","São Bernardo do Campo","2020-03-23",5,9
+"SP","São Bernardo do Campo","2020-03-24",1,10
+"SP","São Bernardo do Campo","Não informado",3,13
+"SP","São Caetano do Sul","2020-03-16",1,1
+"SP","São Caetano do Sul","2020-03-20",3,4
+"SP","São Caetano do Sul","2020-03-23",7,11
+"SP","São Caetano do Sul","Não informado",5,16
+"SP","São José do Rio Preto","2020-03-18",1,1
+"SP","São José dos Campos","2020-03-18",1,1
+"SP","São José dos Campos","2020-03-23",1,2
+"SP","São Paulo","2020-02-26",1,1
+"SP","São Paulo","2020-02-29",1,2
+"SP","São Paulo","2020-03-04",1,3
+"SP","São Paulo","2020-03-05",3,6
+"SP","São Paulo","2020-03-06",4,10
+"SP","São Paulo","2020-03-07",2,12
+"SP","São Paulo","2020-03-08",3,15
+"SP","São Paulo","2020-03-10",3,18
+"SP","São Paulo","2020-03-11",11,29
+"SP","São Paulo","2020-03-12",15,44
+"SP","São Paulo","2020-03-13",9,53
+"SP","São Paulo","2020-03-14",9,62
+"SP","São Paulo","2020-03-15",70,132
+"SP","São Paulo","2020-03-16",13,145
+"SP","São Paulo","2020-03-17",11,156
+"SP","São Paulo","2020-03-18",59,215
+"SP","São Paulo","2020-03-19",43,258
+"SP","São Paulo","2020-03-20",100,358
+"SP","São Paulo","2020-03-21",51,409
+"SP","São Paulo","2020-03-22",171,580
+"SP","São Paulo","2020-03-23",91,671
+"SP","São Paulo","2020-03-24",37,708
+"SP","São Paulo","2020-03-25",14,722
+"SP","São Sebastião","2020-03-22",1,1
+"SP","São Sebastião","2020-03-23",1,2
+"SP","Taboão da Serra","2020-03-21",1,1
+"SP","Taubaté","2020-03-19",1,1
+"SP","Valinhos","2020-03-21",1,1
+"SP","Vargem Grande Paulista","2020-03-19",1,1

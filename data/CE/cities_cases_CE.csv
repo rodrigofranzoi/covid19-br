@@ -1,0 +1,22 @@
+"state","city_name","date","new_cases","count"
+"CE","Aquiraz","2020-03-16",1,1
+"CE","Aquiraz","2020-03-21",3,4
+"CE","Aquiraz","2020-03-22",1,5
+"CE","Aquiraz","2020-03-23",1,6
+"CE","Fortaleza","2020-03-15",3,3
+"CE","Fortaleza","2020-03-16",5,8
+"CE","Fortaleza","2020-03-17",2,10
+"CE","Fortaleza","2020-03-18",8,18
+"CE","Fortaleza","2020-03-19",4,22
+"CE","Fortaleza","2020-03-20",42,64
+"CE","Fortaleza","2020-03-21",13,77
+"CE","Fortaleza","2020-03-22",40,117
+"CE","Fortaleza","2020-03-23",36,153
+"CE","Fortaleza","2020-03-24",19,172
+"CE","Fortaleza","2020-03-25",26,198
+"CE","Fortim","2020-03-20",1,1
+"CE","Juazeiro do Norte","2020-03-20",1,1
+"CE","Mauriti","2020-03-24",1,1
+"CE","Sobral","2020-03-18",1,1
+"CE","Sobral","2020-03-23",2,3
+"CE","Sobral","2020-03-24",1,4

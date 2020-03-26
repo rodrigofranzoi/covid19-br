@@ -1,0 +1,78 @@
+"state","city_name","date","new_cases","count"
+"RS","Alvorada","2020-03-19",1,1
+"RS","Alvorada","2020-03-20",1,2
+"RS","Anta Gorda","2020-03-24",1,1
+"RS","Anta Gorda","2020-03-25",1,2
+"RS","Bagé","2020-03-19",2,2
+"RS","Bagé","2020-03-21",1,3
+"RS","Bagé","2020-03-22",3,6
+"RS","Bagé","2020-03-23",1,7
+"RS","Bento Gonçalves","2020-03-18",1,1
+"RS","Bento Gonçalves","2020-03-21",2,3
+"RS","Campo Bom","2020-03-10",1,1
+"RS","Campo Bom","2020-03-18",1,2
+"RS","Canoas","2020-03-20",2,2
+"RS","Canoas","2020-03-22",1,3
+"RS","Canoas","2020-03-23",2,5
+"RS","Canoas","2020-03-24",1,6
+"RS","Capão da Canoa","2020-03-23",1,1
+"RS","Capão da Canoa","2020-03-24",1,2
+"RS","Carlos Barbosa","2020-03-21",1,1
+"RS","Caxias do Sul","2020-03-11",1,1
+"RS","Caxias do Sul","2020-03-16",1,2
+"RS","Caxias do Sul","2020-03-25",1,3
+"RS","Cerro Grande do Sul","2020-03-25",1,1
+"RS","Charqueadas","2020-03-20",1,1
+"RS","Cruzeiro do Sul","2020-03-23",1,1
+"RS","Dois Irmãos","2020-03-20",1,1
+"RS","Dom Pedrito","2020-03-25",1,1
+"RS","Eldorado do Sul","2020-03-20",1,1
+"RS","Erechim","2020-03-19",2,2
+"RS","Erechim","2020-03-20",1,3
+"RS","Estrela","2020-03-21",1,1
+"RS","Estância Velha","2020-03-21",1,1
+"RS","Farroupilha","2020-03-18",1,1
+"RS","Garibaldi","2020-03-24",1,1
+"RS","Gravataí","2020-03-25",1,1
+"RS","Ivoti","2020-03-20",2,2
+"RS","Lajeado","2020-03-21",1,1
+"RS","Lajeado","2020-03-22",2,3
+"RS","Lajeado","2020-03-24",2,5
+"RS","Osório","2020-03-22",1,1
+"RS","Paraí","2020-03-24",1,1
+"RS","Pelotas","2020-03-25",1,1
+"RS","Porto Alegre","2020-03-11",2,2
+"RS","Porto Alegre","2020-03-13",2,4
+"RS","Porto Alegre","2020-03-14",1,5
+"RS","Porto Alegre","2020-03-16",3,8
+"RS","Porto Alegre","2020-03-17",8,16
+"RS","Porto Alegre","2020-03-18",5,21
+"RS","Porto Alegre","2020-03-19",2,23
+"RS","Porto Alegre","2020-03-20",6,29
+"RS","Porto Alegre","2020-03-21",6,35
+"RS","Porto Alegre","2020-03-22",5,40
+"RS","Porto Alegre","2020-03-23",1,41
+"RS","Porto Alegre","2020-03-24",6,47
+"RS","Porto Alegre","2020-03-25",40,87
+"RS","Rio Grande","2020-03-23",1,1
+"RS","Rio Grande","2020-03-25",1,2
+"RS","Sant'Ana do Livramento","2020-03-23",1,1
+"RS","Sant'Ana do Livramento","2020-03-25",1,2
+"RS","Sant'ana do Livramento","2020-03-19",1,1
+"RS","Sant'ana do Livramento","2020-03-20",1,2
+"RS","Santa Maria","2020-03-21",1,1
+"RS","Santa Maria","2020-03-23",1,2
+"RS","Santiago","2020-03-23",1,1
+"RS","Santo Antônio da Patrulha","2020-03-22",1,1
+"RS","Sapiranga","2020-03-23",1,1
+"RS","Sapiranga","2020-03-25",1,2
+"RS","Serafina Corrêa","2020-03-19",1,1
+"RS","Serafina Corrêa","2020-03-24",1,2
+"RS","São Leopoldo","2020-03-20",1,1
+"RS","Taquara","2020-03-20",1,1
+"RS","Torres","2020-03-18",1,1
+"RS","Torres","2020-03-20",1,2
+"RS","Torres","2020-03-22",1,3
+"RS","Torres","2020-03-24",2,5
+"RS","Torres","2020-03-25",1,6
+"RS","Viamão","2020-03-21",1,1
