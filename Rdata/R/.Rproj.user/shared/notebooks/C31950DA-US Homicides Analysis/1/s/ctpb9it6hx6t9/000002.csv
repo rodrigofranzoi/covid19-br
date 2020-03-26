@@ -1,0 +1,37 @@
+"0","library(ggplot2)"
+"0","library(maps)"
+"2","
+Attaching package: 'maps'
+
+"
+"2","The following object is masked from 'package:purrr':
+
+    map
+
+"
+"0","us <- map_data(""state"")"
+"0","f <- function(str) {"
+"0","  "
+"0","  df6 <- df5 %>% filter(Victim.Race == str)"
+"0","  gg <- ggplot()"
+"0","  "
+"0","  gg <- gg + geom_map(data=us, map=us,"
+"0","                    aes(x=long, y=lat, map_id=region),"
+"0","                    fill=""#ffffff"", color=""#ffffff"", size=0.15)"
+"0","  "
+"0","  gg <- gg + geom_map(data=df6, map=us,"
+"0","                    aes(fill=Perc.Not.Solved, map_id=region),"
+"0","                    color=""#ffffff"", size=0.15)"
+"0","  gg <- gg + scale_fill_gradient(low=""white"", high=""darkblue"", name="""")     "
+"0","  "
+"0","  gg <- gg + labs(x="""", y="""", title = paste(""Rate (in %) of unsolved cases by state:"", str)) +"
+"0","      coord_map(""albers"", lat0 = 39, lat1 = 45) +"
+"0","      theme(panel.border = element_blank()) +"
+"0","      theme(panel.background = element_blank()) +"
+"0","      theme(axis.ticks = element_blank()) +"
+"0","      theme(axis.text = element_blank())"
+"0","  gg"
+"0","}"
+"0","lapply(races, f)"
+"2","Error in lapply(races, f) : object 'races' not found
+"

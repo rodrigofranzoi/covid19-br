@@ -1,0 +1,7 @@
+"0","df4 %>%ggplot(aes(x = Victim.Race, y = Perc.Not.Solved)) +
+  geom_bar(stat=""identity"", fill=""steelblue"") +
+  geom_text(label = paste(specify_decimal(df4$Perc.Not.Solved, 2),""%""),  vjust=1.6, color=""white"", size=3.5) +
+  labs(y = ""Percentage of unsolved cases"", x = ""Race"", title = ""US Homicides 1980 - 2014"")
+"
+"2","Error in eval(lhs, parent, parent) : object 'df4' not found
+"

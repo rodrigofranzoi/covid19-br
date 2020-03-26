@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1585175781107.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F1339F91",
+    "lastKnownWriteTime" : 1513377514,
+    "last_content_update" : 1585181895175,
+    "path" : "~/Documents/UFRGS/2017/LPS/US-Homicides/US-Homicides Analysis/US Homicides Analysis.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "74,90",
+        "last_setup_crc32" : "42DB3839bb338d19",
+        "scrollLine" : "62"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

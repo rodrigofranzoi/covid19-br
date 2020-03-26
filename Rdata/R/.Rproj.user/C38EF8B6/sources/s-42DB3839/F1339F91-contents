@@ -1,0 +1,170 @@
+---
+title: "US Homicides Ethnical Analysis"
+author: "Rodrigo Scroferneker"
+date: "13/12/2017"
+output: 
+  pdf_document: 
+    latex_engine: xelatex
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+library(tidyverse);
+library(magrittr);
+library(dplyr)
+library(gridExtra)
+library(grid)
+library(scales)
+df <- read.csv("database.csv", header=TRUE)
+races <- list("White", "Black", "Asian/Pacific Islander", "Native American/Alaska Native")
+```
+# Introduction
+
+  This three step analysis academic work has the purpose of investigating the homicide statistics in the United States. Using a FBI database that goes from 1980-2014 that contains the number of homicides and details according to each case such as state where it was committed, ethnicity of the murderer, ethnicity of the victim, race, the level of relationship of the involved, age, sex and murder weapon, this work aims to answer two questions focusing on a racial approach: is there a difference between the number of solved cases when it comes to race? What state kills more by race? Therefore, this work will do a more social inclined take on the dataset.
+
+# Objective
+
+  This assignment will start by only sorting out the amount of solved and unsolved cases in general for the whole country. Then it will continue by analyzing the official statistics with the main intention of finding out if there are any divergences on the amount of solved and unsolved cases depending on the race of the victim, focusing on four major races: White, Asian/Pacific islander, native American/Alaska native and Black. To close if of, there will be a more specific approach to each one of the 50 states to identify which of the races has a higher murder statistic.
+
+
+# Homicides in General
+
+```{r}
+df0 <- df %>%
+  group_by(Crime.Solved) %>%
+  summarise(N = n()) %>%
+  summarise(Total = sum(N), NotSolved = N[1], Solved = N[2], Perc.Not.Solved = NotSolved*100/Total)
+grid.table(df0)
+
+```
+  As it can be noted, our sample has a great ammount of data for each one of the states from 1980-2014. Here it shows that 29.80% of the cases are left unsolved.
+```{r, include=FALSE}
+df1 <- df %>% 
+      group_by(Victim.Race, Crime.Solved)  
+
+df2 <- filter(df1, Crime.Solved == "No")%>%
+      summarise(Not.Solved = n()) %>%
+      group_by(Victim.Race) %>%
+      select("Victim.Race", "Not.Solved")
+
+df3 <- filter(df1, Crime.Solved == "Yes")%>%
+      summarise(Solved = n()) %>%
+      group_by(Victim.Race) %>%
+      select("Victim.Race", "Solved")
+
+df4 <- merge(x = df2, y = df3, by = "Victim.Race") %>% mutate(Total = Not.Solved+Solved, 
+                Perc.Not.Solved = (Not.Solved*100)/Total) %>% filter( Victim.Race != "Unknown") %>% arrange(desc(Perc.Not.Solved))
+```
+
+```{r}
+grid.table(df4)
+```
+  Looking into this graphic, we can see that there is some sort of difference between the amount of unsolved cases between black and white people even though they have nearly the same amount of cases. When it comes to the Asian/Pacific Islander e Native American/Alaska Native, they have a smaller rate, but they also have a way less significant amount of cases, so it isn't that simple to make assertives about those two races when compared to the white and black rate of unsolved crimes.
+```{r}
+library(ggplot2)
+
+specify_decimal <- function(x, k) trimws(format(round(x, k), nsmall=k))
+
+df4 %>%ggplot(aes(x = Victim.Race, y = Perc.Not.Solved)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  geom_text(label = paste(specify_decimal(df4$Perc.Not.Solved, 2),"%"),  vjust=1.6, color="white", size=3.5) +
+  labs(y = "Percentage of unsolved cases", x = "Race", title = "US Homicides 1980 - 2014")
+```
+
+#Unsolved cases by state 
+
+  We are looking into making a more specific approch to the dataset of solved and unsolved murders so, from now on, each percentage will be sorted out by state.
+
+```{r}
+  df5 <- df %>% filter(Victim.Race != "Unknown") %>%
+    group_by(State, Crime.Solved) %>%
+    summarise( N = n()) %>%
+    mutate(region=tolower(State))
+
+notSolved <-data.frame(filter(df5, Crime.Solved == "No") %>%
+    mutate(Not.Solved = N)   %>%
+    select("Not.Solved", "region"))
+
+solved <- data.frame (filter(df5, Crime.Solved == "Yes") %>%
+    mutate(Solved = N)   %>%
+    select("Solved", "region"))
+
+df5 <- merge(x = notSolved, y = solved, by = c("region"))
+df5 <- df5 %>% mutate(Total =  df5$Not.Solved + Solved, Perc.Not.Solved = df5$Not.Solved * 100/ Total)  %>% select("Perc.Not.Solved", "region") %>% arrange(desc(Perc.Not.Solved))
+
+df5 %>% head(5) %>% grid.table()
+
+```
+
+  As we can see, here is the top 5 states with the biggest amount of unsolved crimes.
+
+#Unsolved cases by race
+```{r}
+df5 <- df %>%
+  group_by(State, Crime.Solved, Victim.Race) %>%
+  summarise( N = n()) %>%
+  mutate(region=tolower(State))
+
+notSolved <-data.frame (filter(df5, Crime.Solved == "No") %>%
+  mutate(Not.Solved = N)   %>%
+  filter( Victim.Race != "Unknown")) %>%
+  select("Victim.Race", "Not.Solved", "region")
+
+solved <- data.frame (filter(df5, Crime.Solved == "Yes") %>%
+  mutate(Solved = N)   %>%
+  filter( Victim.Race != "Unknown")) %>%
+  select("Victim.Race", "Solved", "region")
+
+df5 <- merge(x = notSolved, y = solved, by = c("region", "Victim.Race"))
+df5 <- df5 %>% mutate(Total =  df5$Not.Solved + Solved, Perc.Not.Solved = df5$Not.Solved * 100/ Total)
+
+lapply(races, function(str){
+  df5 %>% filter(Victim.Race == str) %>% arrange(desc(Perc.Not.Solved)) %>% select("region","Victim.Race", "Perc.Not.Solved" ) %>% head(10) 
+})
+```
+  
+  Here we can see the top 10 of unsolved cases divided by race. 
+
+```{r, fig.height=3}
+library(ggplot2)
+library(maps)
+
+us <- map_data("state")
+
+f <- function(str) {
+  
+  df6 <- df5 %>% filter(Victim.Race == str)
+  gg <- ggplot()
+  
+  gg <- gg + geom_map(data=us, map=us,
+                    aes(x=long, y=lat, map_id=region),
+                    fill="#ffffff", color="#ffffff", size=0.15)
+  
+  gg <- gg + geom_map(data=df6, map=us,
+                    aes(fill=Perc.Not.Solved, map_id=region),
+                    color="#ffffff", size=0.15)
+
+  gg <- gg + scale_fill_gradient(low="white", high="darkblue", name="")     
+  
+  gg <- gg + labs(x="", y="", title = paste("Rate (in %) of unsolved cases by state:", str)) +
+      coord_map("albers", lat0 = 39, lat1 = 45) +
+      theme(panel.border = element_blank()) +
+      theme(panel.background = element_blank()) +
+      theme(axis.ticks = element_blank()) +
+      theme(axis.text = element_blank())
+  gg
+}
+
+lapply(races, f)
+```
+
+  We can observe that, even with different intensities of color in each state, the states follows some pattern according to the race.
+
+#Conclusion
+
+  After a final dissection of the dataset, its possible to conclude that the numbers of solved and unsolved cases for each race in each state are in a way - except some places - proportional, meaning that, when looking into the efficiency of the system to solve cases they are either very efficient or not efficient despite the race. Take the District of Columbia for example, when it comes to crimes of manslaughter committed against black people 65.97% of the cases are unsolved, a more alarming rate of 71.42% when it comes to native Americans, 70.21% when it comes to Asian and pacific islanders and a rate of 62.42% when it comes to white people, the average of unsolved cases in the District of Columbia hits a total of 65.75% , more than half of the murders committed on that state are left unsolved and that is an issue that affects every race in very high rates. It’s important to also point out the startling and, when it comes to the United States of America in general, out of the pattern discrepancy that happens is Massachusetts. Massachusetts is the fifth state with the largest amount of unsolved cases in the whole country, 36.74% of its murders are left without an answer, but a deeper analysis of the race statists will show that 50.74% of the cases regarding black people are unsolved, ranking as second, however, it’s only the tenth state with the largest amount of unsolved cases regarding white people (27% of the cases) and it doesn't even show up on the top ten for native Americans/Alaska natives and Asian/Pacific islander rates. 
+  On account of the data analysis and the statistics presented in this work, we can see that the differences in the number of solved and unsolved cases for each race, in most of the country are very small. In some of the states, it is possible to see that there is a variance, but it’s something that needs to be look into deeper, needing a research that approaches historical, social and other issues that are not presented on the FBI dataset to find out why those variances can be noted.

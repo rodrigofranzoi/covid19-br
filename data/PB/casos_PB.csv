@@ -1,0 +1,5 @@
+"state","city_name","date","new_cases","city_cod","state_cod","count"
+"PB","João Pessoa","2020-03-18",1,"2507507","25",1
+"PB","Igaracy","2020-03-23",1,"2502607","25",1
+"PB","João Pessoa","2020-03-24",1,"2507507","25",2
+"PB","João Pessoa","2020-03-25",2,"2507507","25",4

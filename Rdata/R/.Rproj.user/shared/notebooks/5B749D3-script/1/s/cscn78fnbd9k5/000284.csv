@@ -1,0 +1,5 @@
+"0","df2 %>% filter( date != ""Não informado"") %>% ggplot(aes(x = date, y = new_cases)) +"
+"0","  geom_bar(stat=""identity"", fill=""black"") +"
+"0","  labs(y = ""Casos Novos"", x = ""Data"", title = ""Novos Casos de Covid19 Brasil"") +"
+"0","  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +"
+"0","  ggsave('../../data/new_cases_brasil.png', width = 20, height = 9, dpi = 100)"
